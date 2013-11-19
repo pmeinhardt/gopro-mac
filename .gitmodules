@@ -1,0 +1,3 @@
+[submodule "GoPro-Mac/Vendor/libgopro"]
+	path = GoPro-Mac/Vendor/libgopro
+	url = https://github.com/pmeinhardt/libgopro.git

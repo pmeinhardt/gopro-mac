@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD0A9FF1183B7FB100AFCA98 /* libgopro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD488FAA1833B57500C0880B /* libgopro.a */; };
+		AD267753183B7C7F0084B5F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD267751183B7C7F0084B5F4 /* InfoPlist.strings */; };
+		AD488F341833A7F500C0880B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD488F331833A7F500C0880B /* Cocoa.framework */; };
+		AD488F401833A7F500C0880B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD488F3F1833A7F500C0880B /* main.m */; };
+		AD488FAE1833B5BA00C0880B /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD488FAD1833B5BA00C0880B /* libcurl.dylib */; };
+		AD545676183B75D3000A1A20 /* CameraWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545674183B75D3000A1A20 /* CameraWindow.xib */; };
+		AD545687183B7625000A1A20 /* ConnectWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545683183B7625000A1A20 /* ConnectWindow.xib */; };
+		AD545688183B7625000A1A20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545685183B7625000A1A20 /* MainMenu.xib */; };
+		ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59011838376700C42D60 /* QuartzCore.framework */; };
+		ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59041838B9DF00C42D60 /* WebKit.framework */; };
+		ADBDAE0C183B79AE004CBC19 /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545678183B760E000A1A20 /* GPAppDelegate.m */; };
+		ADBDAE0E183B79AE004CBC19 /* GPCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567A183B760E000A1A20 /* GPCamera.m */; };
+		ADBDAE10183B79AE004CBC19 /* GPCameraOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567C183B760E000A1A20 /* GPCameraOperation.m */; };
+		ADBDAE12183B79AE004CBC19 /* GPCameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567E183B760E000A1A20 /* GPCameraWindowController.m */; };
+		ADBDAE14183B79AE004CBC19 /* GPConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545680183B760E000A1A20 /* GPConnectWindowController.m */; };
+		ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD488FA01833AC8100C0880B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD488F281833A7F400C0880B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD488F9C1833AC3B00C0880B;
+			remoteInfo = libgopro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD267752183B7C7F0084B5F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD488F301833A7F500C0880B /* GoPro Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoPro Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD488F331833A7F500C0880B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AD488F361833A7F500C0880B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AD488F371833A7F500C0880B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AD488F381833A7F500C0880B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD488F3B1833A7F500C0880B /* GoPro Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoPro Mac-Info.plist"; sourceTree = "<group>"; };
+		AD488F3F1833A7F500C0880B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD488F411833A7F500C0880B /* GoPro Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoPro Mac-Prefix.pch"; sourceTree = "<group>"; };
+		AD488F821833ABBB00C0880B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AD488F841833ABBB00C0880B /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		AD488F861833ABBB00C0880B /* gopro.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gopro.c; sourceTree = "<group>"; };
+		AD488F891833ABBB00C0880B /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		AD488F8A1833ABBB00C0880B /* defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defaults.h; sourceTree = "<group>"; };
+		AD488F8B1833ABBB00C0880B /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		AD488F8C1833ABBB00C0880B /* libgopro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libgopro.h; sourceTree = "<group>"; };
+		AD488F8D1833ABBB00C0880B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		AD488F8E1833ABBB00C0880B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		AD488F901833ABBB00C0880B /* camera.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = camera.c; sourceTree = "<group>"; };
+		AD488F911833ABBB00C0880B /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		AD488F921833ABBB00C0880B /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = client.h; sourceTree = "<group>"; };
+		AD488F931833ABBB00C0880B /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		AD488F941833ABBB00C0880B /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		AD488FAA1833B57500C0880B /* libgopro.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgopro.a; path = "GoPro-Mac/Vendor/libgopro/build/libgopro.a"; sourceTree = "<group>"; };
+		AD488FAD1833B5BA00C0880B /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libcurl.dylib; sourceTree = DEVELOPER_DIR; };
+		AD545675183B75D3000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CameraWindow.xib; sourceTree = "<group>"; };
+		AD545677183B760E000A1A20 /* GPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
+		AD545678183B760E000A1A20 /* GPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
+		AD545679183B760E000A1A20 /* GPCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCamera.h; sourceTree = "<group>"; };
+		AD54567A183B760E000A1A20 /* GPCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCamera.m; sourceTree = "<group>"; };
+		AD54567B183B760E000A1A20 /* GPCameraOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCameraOperation.h; sourceTree = "<group>"; };
+		AD54567C183B760E000A1A20 /* GPCameraOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCameraOperation.m; sourceTree = "<group>"; };
+		AD54567D183B760E000A1A20 /* GPCameraWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCameraWindowController.h; sourceTree = "<group>"; };
+		AD54567E183B760E000A1A20 /* GPCameraWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCameraWindowController.m; sourceTree = "<group>"; };
+		AD54567F183B760E000A1A20 /* GPConnectWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPConnectWindowController.h; sourceTree = "<group>"; };
+		AD545680183B760E000A1A20 /* GPConnectWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPConnectWindowController.m; sourceTree = "<group>"; };
+		AD545681183B760F000A1A20 /* NSWindow+GPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindow+GPExtensions.h"; sourceTree = "<group>"; };
+		AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+GPExtensions.m"; sourceTree = "<group>"; };
+		AD545684183B7625000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConnectWindow.xib; sourceTree = "<group>"; };
+		AD545686183B7625000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ADBA59011838376700C42D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		ADBA59041838B9DF00C42D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD488F2D1833A7F500C0880B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD488FAE1833B5BA00C0880B /* libcurl.dylib in Frameworks */,
+				AD0A9FF1183B7FB100AFCA98 /* libgopro.a in Frameworks */,
+				AD488F341833A7F500C0880B /* Cocoa.framework in Frameworks */,
+				ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */,
+				ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD488F271833A7F400C0880B = {
+			isa = PBXGroup;
+			children = (
+				AD488F391833A7F500C0880B /* GoPro-Mac */,
+				AD488FAC1833B57C00C0880B /* Libraries */,
+				AD488F321833A7F500C0880B /* Frameworks */,
+				AD488F311833A7F500C0880B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD488F311833A7F500C0880B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F301833A7F500C0880B /* GoPro Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD488F321833A7F500C0880B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F331833A7F500C0880B /* Cocoa.framework */,
+				AD488F351833A7F500C0880B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD488F351833A7F500C0880B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F361833A7F500C0880B /* AppKit.framework */,
+				AD488F371833A7F500C0880B /* CoreData.framework */,
+				AD488F381833A7F500C0880B /* Foundation.framework */,
+				ADBA59041838B9DF00C42D60 /* WebKit.framework */,
+				ADBA59011838376700C42D60 /* QuartzCore.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AD488F391833A7F500C0880B /* GoPro-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				AD545685183B7625000A1A20 /* MainMenu.xib */,
+				AD545674183B75D3000A1A20 /* CameraWindow.xib */,
+				AD545683183B7625000A1A20 /* ConnectWindow.xib */,
+				AD267751183B7C7F0084B5F4 /* InfoPlist.strings */,
+				AD545677183B760E000A1A20 /* GPAppDelegate.h */,
+				AD545678183B760E000A1A20 /* GPAppDelegate.m */,
+				AD545679183B760E000A1A20 /* GPCamera.h */,
+				AD54567A183B760E000A1A20 /* GPCamera.m */,
+				AD54567B183B760E000A1A20 /* GPCameraOperation.h */,
+				AD54567C183B760E000A1A20 /* GPCameraOperation.m */,
+				AD54567D183B760E000A1A20 /* GPCameraWindowController.h */,
+				AD54567E183B760E000A1A20 /* GPCameraWindowController.m */,
+				AD54567F183B760E000A1A20 /* GPConnectWindowController.h */,
+				AD545680183B760E000A1A20 /* GPConnectWindowController.m */,
+				AD545681183B760F000A1A20 /* NSWindow+GPExtensions.h */,
+				AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */,
+				AD488F3A1833A7F500C0880B /* Supporting Files */,
+				AD488F801833ABBB00C0880B /* Vendor */,
+			);
+			path = "GoPro-Mac";
+			sourceTree = "<group>";
+		};
+		AD488F3A1833A7F500C0880B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F411833A7F500C0880B /* GoPro Mac-Prefix.pch */,
+				AD488F3B1833A7F500C0880B /* GoPro Mac-Info.plist */,
+				AD488F3F1833A7F500C0880B /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD488F801833ABBB00C0880B /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F811833ABBB00C0880B /* libgopro */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		AD488F811833ABBB00C0880B /* libgopro */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F821833ABBB00C0880B /* .gitignore */,
+				AD488F831833ABBB00C0880B /* build */,
+				AD488F851833ABBB00C0880B /* examples */,
+				AD488F871833ABBB00C0880B /* include */,
+				AD488F8D1833ABBB00C0880B /* Makefile */,
+				AD488F8E1833ABBB00C0880B /* README.md */,
+				AD488F8F1833ABBB00C0880B /* src */,
+			);
+			path = libgopro;
+			sourceTree = "<group>";
+		};
+		AD488F831833ABBB00C0880B /* build */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F841833ABBB00C0880B /* .gitkeep */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		AD488F851833ABBB00C0880B /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F861833ABBB00C0880B /* gopro.c */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		AD488F871833ABBB00C0880B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F881833ABBB00C0880B /* gopro */,
+				AD488F8C1833ABBB00C0880B /* libgopro.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		AD488F881833ABBB00C0880B /* gopro */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F891833ABBB00C0880B /* camera.h */,
+				AD488F8A1833ABBB00C0880B /* defaults.h */,
+				AD488F8B1833ABBB00C0880B /* version.h */,
+			);
+			path = gopro;
+			sourceTree = "<group>";
+		};
+		AD488F8F1833ABBB00C0880B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AD488F901833ABBB00C0880B /* camera.c */,
+				AD488F911833ABBB00C0880B /* client.c */,
+				AD488F921833ABBB00C0880B /* client.h */,
+				AD488F931833ABBB00C0880B /* common.h */,
+				AD488F941833ABBB00C0880B /* util.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AD488FAC1833B57C00C0880B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				AD488FAD1833B5BA00C0880B /* libcurl.dylib */,
+				AD488FAA1833B57500C0880B /* libgopro.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		AD488F9C1833AC3B00C0880B /* libgopro */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = AD488F9D1833AC3B00C0880B /* Build configuration list for PBXLegacyTarget "libgopro" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/pmeinhardt/Public/GitHub/gopro-mac/GoPro-Mac/Vendor/libgopro";
+			dependencies = (
+			);
+			name = libgopro;
+			passBuildSettingsInEnvironment = 1;
+			productName = libgopro;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		AD488F2F1833A7F500C0880B /* GoPro Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD488F4D1833A7F500C0880B /* Build configuration list for PBXNativeTarget "GoPro Mac" */;
+			buildPhases = (
+				AD488F2C1833A7F500C0880B /* Sources */,
+				AD488F2D1833A7F500C0880B /* Frameworks */,
+				AD488F2E1833A7F500C0880B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD488FA11833AC8100C0880B /* PBXTargetDependency */,
+			);
+			name = "GoPro Mac";
+			productName = "GoPro Mac";
+			productReference = AD488F301833A7F500C0880B /* GoPro Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD488F281833A7F400C0880B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Paul Meinhardt";
+			};
+			buildConfigurationList = AD488F2B1833A7F400C0880B /* Build configuration list for PBXProject "GoPro-Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD488F271833A7F400C0880B;
+			productRefGroup = AD488F311833A7F500C0880B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD488F2F1833A7F500C0880B /* GoPro Mac */,
+				AD488F9C1833AC3B00C0880B /* libgopro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD488F2E1833A7F500C0880B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD545676183B75D3000A1A20 /* CameraWindow.xib in Resources */,
+				AD545687183B7625000A1A20 /* ConnectWindow.xib in Resources */,
+				AD545688183B7625000A1A20 /* MainMenu.xib in Resources */,
+				AD267753183B7C7F0084B5F4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD488F2C1833A7F500C0880B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD488F401833A7F500C0880B /* main.m in Sources */,
+				ADBDAE0C183B79AE004CBC19 /* GPAppDelegate.m in Sources */,
+				ADBDAE0E183B79AE004CBC19 /* GPCamera.m in Sources */,
+				ADBDAE10183B79AE004CBC19 /* GPCameraOperation.m in Sources */,
+				ADBDAE12183B79AE004CBC19 /* GPCameraWindowController.m in Sources */,
+				ADBDAE14183B79AE004CBC19 /* GPConnectWindowController.m in Sources */,
+				ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD488FA11833AC8100C0880B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD488F9C1833AC3B00C0880B /* libgopro */;
+			targetProxy = AD488FA01833AC8100C0880B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD267751183B7C7F0084B5F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD267752183B7C7F0084B5F4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AD545674183B75D3000A1A20 /* CameraWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD545675183B75D3000A1A20 /* en */,
+			);
+			name = CameraWindow.xib;
+			sourceTree = "<group>";
+		};
+		AD545683183B7625000A1A20 /* ConnectWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD545684183B7625000A1A20 /* en */,
+			);
+			name = ConnectWindow.xib;
+			sourceTree = "<group>";
+		};
+		AD545685183B7625000A1A20 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD545686183B7625000A1A20 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD488F4B1833A7F500C0880B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AD488F4C1833A7F500C0880B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AD488F4E1833A7F500C0880B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoPro-Mac/Supporting Files/GoPro Mac-Prefix.pch";
+				INFOPLIST_FILE = "GoPro-Mac/Supporting Files/GoPro Mac-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoPro-Mac/Vendor/libgopro/build\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "GoPro Mac";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AD488F4F1833A7F500C0880B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GoPro-Mac/Supporting Files/GoPro Mac-Prefix.pch";
+				INFOPLIST_FILE = "GoPro-Mac/Supporting Files/GoPro Mac-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GoPro-Mac/Vendor/libgopro/build\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "GoPro Mac";
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AD488F9E1833AC3B00C0880B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD488F9F1833AC3B00C0880B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD488F2B1833A7F400C0880B /* Build configuration list for PBXProject "GoPro-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD488F4B1833A7F500C0880B /* Debug */,
+				AD488F4C1833A7F500C0880B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD488F4D1833A7F500C0880B /* Build configuration list for PBXNativeTarget "GoPro Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD488F4E1833A7F500C0880B /* Debug */,
+				AD488F4F1833A7F500C0880B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD488F9D1833AC3B00C0880B /* Build configuration list for PBXLegacyTarget "libgopro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD488F9E1833AC3B00C0880B /* Debug */,
+				AD488F9F1833AC3B00C0880B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD488F281833A7F400C0880B /* Project object */;
+}
