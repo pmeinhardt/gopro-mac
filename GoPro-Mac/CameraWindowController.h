@@ -8,14 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "GPCamera.h"
+#import "GoProCamera.h"
 
-@interface GPCameraWindowController : NSWindowController
+@interface CameraWindowController : NSWindowController
 
 @property (nonatomic, assign) IBOutlet NSProgressIndicator *spinner;
 @property (nonatomic, assign) IBOutlet NSTextField *label;
 
-@property (nonatomic, retain) GPCamera *camera;
+@property (nonatomic, retain) GoProCamera *camera;
 
 - (IBAction)sync:(id)sender;
 

@@ -14,14 +14,17 @@
 		AD488FAE1833B5BA00C0880B /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD488FAD1833B5BA00C0880B /* libcurl.dylib */; };
 		AD545676183B75D3000A1A20 /* CameraWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545674183B75D3000A1A20 /* CameraWindow.xib */; };
 		AD545687183B7625000A1A20 /* ConnectWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545683183B7625000A1A20 /* ConnectWindow.xib */; };
-		AD545688183B7625000A1A20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD545685183B7625000A1A20 /* MainMenu.xib */; };
+		AD66E89E183BFFFC00C7F34D /* status-off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E89A183BFFFC00C7F34D /* status-off.png */; };
+		AD66E8A0183BFFFC00C7F34D /* status-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E89C183BFFFC00C7F34D /* status-off@2x.png */; };
+		AD66E8A3183C096A00C7F34D /* status-on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A1183C096A00C7F34D /* status-on.png */; };
+		AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A2183C096A00C7F34D /* status-on@2x.png */; };
+		AD66E8AA183C0E8A00C7F34D /* StatusBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */; };
 		ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59011838376700C42D60 /* QuartzCore.framework */; };
 		ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59041838B9DF00C42D60 /* WebKit.framework */; };
-		ADBDAE0C183B79AE004CBC19 /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545678183B760E000A1A20 /* GPAppDelegate.m */; };
-		ADBDAE0E183B79AE004CBC19 /* GPCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567A183B760E000A1A20 /* GPCamera.m */; };
-		ADBDAE10183B79AE004CBC19 /* GPCameraOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567C183B760E000A1A20 /* GPCameraOperation.m */; };
-		ADBDAE12183B79AE004CBC19 /* GPCameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567E183B760E000A1A20 /* GPCameraWindowController.m */; };
-		ADBDAE14183B79AE004CBC19 /* GPConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545680183B760E000A1A20 /* GPConnectWindowController.m */; };
+		ADBDAE0C183B79AE004CBC19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545678183B760E000A1A20 /* AppDelegate.m */; };
+		ADBDAE0E183B79AE004CBC19 /* GoProCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567A183B760E000A1A20 /* GoProCamera.m */; };
+		ADBDAE12183B79AE004CBC19 /* CameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567E183B760E000A1A20 /* CameraWindowController.m */; };
+		ADBDAE14183B79AE004CBC19 /* ConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545680183B760E000A1A20 /* ConnectWindowController.m */; };
 		ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */; };
 /* End PBXBuildFile section */
 
@@ -62,20 +65,23 @@
 		AD488FAA1833B57500C0880B /* libgopro.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgopro.a; path = "GoPro-Mac/Vendor/libgopro/build/libgopro.a"; sourceTree = "<group>"; };
 		AD488FAD1833B5BA00C0880B /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libcurl.dylib; sourceTree = DEVELOPER_DIR; };
 		AD545675183B75D3000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CameraWindow.xib; sourceTree = "<group>"; };
-		AD545677183B760E000A1A20 /* GPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
-		AD545678183B760E000A1A20 /* GPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
-		AD545679183B760E000A1A20 /* GPCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCamera.h; sourceTree = "<group>"; };
-		AD54567A183B760E000A1A20 /* GPCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCamera.m; sourceTree = "<group>"; };
-		AD54567B183B760E000A1A20 /* GPCameraOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCameraOperation.h; sourceTree = "<group>"; };
-		AD54567C183B760E000A1A20 /* GPCameraOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCameraOperation.m; sourceTree = "<group>"; };
-		AD54567D183B760E000A1A20 /* GPCameraWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPCameraWindowController.h; sourceTree = "<group>"; };
-		AD54567E183B760E000A1A20 /* GPCameraWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPCameraWindowController.m; sourceTree = "<group>"; };
-		AD54567F183B760E000A1A20 /* GPConnectWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPConnectWindowController.h; sourceTree = "<group>"; };
-		AD545680183B760E000A1A20 /* GPConnectWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPConnectWindowController.m; sourceTree = "<group>"; };
+		AD545677183B760E000A1A20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD545678183B760E000A1A20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD545679183B760E000A1A20 /* GoProCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoProCamera.h; sourceTree = "<group>"; };
+		AD54567A183B760E000A1A20 /* GoProCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoProCamera.m; sourceTree = "<group>"; };
+		AD54567D183B760E000A1A20 /* CameraWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraWindowController.h; sourceTree = "<group>"; };
+		AD54567E183B760E000A1A20 /* CameraWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraWindowController.m; sourceTree = "<group>"; };
+		AD54567F183B760E000A1A20 /* ConnectWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectWindowController.h; sourceTree = "<group>"; };
+		AD545680183B760E000A1A20 /* ConnectWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectWindowController.m; sourceTree = "<group>"; };
 		AD545681183B760F000A1A20 /* NSWindow+GPExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindow+GPExtensions.h"; sourceTree = "<group>"; };
 		AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+GPExtensions.m"; sourceTree = "<group>"; };
 		AD545684183B7625000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ConnectWindow.xib; sourceTree = "<group>"; };
-		AD545686183B7625000A1A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AD66E89A183BFFFC00C7F34D /* status-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-off.png"; sourceTree = "<group>"; };
+		AD66E89C183BFFFC00C7F34D /* status-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-off@2x.png"; sourceTree = "<group>"; };
+		AD66E8A1183C096A00C7F34D /* status-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-on.png"; sourceTree = "<group>"; };
+		AD66E8A2183C096A00C7F34D /* status-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-on@2x.png"; sourceTree = "<group>"; };
+		AD66E8A9183C0E8A00C7F34D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatusBarMenu.xib; sourceTree = "<group>"; };
+		AD66E8AB183C111400C7F34D /* GoProMacConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoProMacConstants.h; sourceTree = "<group>"; };
 		ADBA59011838376700C42D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		ADBA59041838B9DF00C42D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -138,20 +144,20 @@
 		AD488F391833A7F500C0880B /* GoPro-Mac */ = {
 			isa = PBXGroup;
 			children = (
-				AD545685183B7625000A1A20 /* MainMenu.xib */,
+				AD66E898183BFFFC00C7F34D /* Assets */,
 				AD545674183B75D3000A1A20 /* CameraWindow.xib */,
 				AD545683183B7625000A1A20 /* ConnectWindow.xib */,
+				AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */,
 				AD267751183B7C7F0084B5F4 /* InfoPlist.strings */,
-				AD545677183B760E000A1A20 /* GPAppDelegate.h */,
-				AD545678183B760E000A1A20 /* GPAppDelegate.m */,
-				AD545679183B760E000A1A20 /* GPCamera.h */,
-				AD54567A183B760E000A1A20 /* GPCamera.m */,
-				AD54567B183B760E000A1A20 /* GPCameraOperation.h */,
-				AD54567C183B760E000A1A20 /* GPCameraOperation.m */,
-				AD54567D183B760E000A1A20 /* GPCameraWindowController.h */,
-				AD54567E183B760E000A1A20 /* GPCameraWindowController.m */,
-				AD54567F183B760E000A1A20 /* GPConnectWindowController.h */,
-				AD545680183B760E000A1A20 /* GPConnectWindowController.m */,
+				AD66E8AB183C111400C7F34D /* GoProMacConstants.h */,
+				AD545677183B760E000A1A20 /* AppDelegate.h */,
+				AD545678183B760E000A1A20 /* AppDelegate.m */,
+				AD54567D183B760E000A1A20 /* CameraWindowController.h */,
+				AD54567E183B760E000A1A20 /* CameraWindowController.m */,
+				AD54567F183B760E000A1A20 /* ConnectWindowController.h */,
+				AD545680183B760E000A1A20 /* ConnectWindowController.m */,
+				AD545679183B760E000A1A20 /* GoProCamera.h */,
+				AD54567A183B760E000A1A20 /* GoProCamera.m */,
 				AD545681183B760F000A1A20 /* NSWindow+GPExtensions.h */,
 				AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */,
 				AD488F3A1833A7F500C0880B /* Supporting Files */,
@@ -248,6 +254,17 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		AD66E898183BFFFC00C7F34D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AD66E89A183BFFFC00C7F34D /* status-off.png */,
+				AD66E89C183BFFFC00C7F34D /* status-off@2x.png */,
+				AD66E8A1183C096A00C7F34D /* status-on.png */,
+				AD66E8A2183C096A00C7F34D /* status-on@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -321,8 +338,12 @@
 			files = (
 				AD545676183B75D3000A1A20 /* CameraWindow.xib in Resources */,
 				AD545687183B7625000A1A20 /* ConnectWindow.xib in Resources */,
-				AD545688183B7625000A1A20 /* MainMenu.xib in Resources */,
 				AD267753183B7C7F0084B5F4 /* InfoPlist.strings in Resources */,
+				AD66E89E183BFFFC00C7F34D /* status-off.png in Resources */,
+				AD66E8A0183BFFFC00C7F34D /* status-off@2x.png in Resources */,
+				AD66E8A3183C096A00C7F34D /* status-on.png in Resources */,
+				AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */,
+				AD66E8AA183C0E8A00C7F34D /* StatusBarMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,11 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD488F401833A7F500C0880B /* main.m in Sources */,
-				ADBDAE0C183B79AE004CBC19 /* GPAppDelegate.m in Sources */,
-				ADBDAE0E183B79AE004CBC19 /* GPCamera.m in Sources */,
-				ADBDAE10183B79AE004CBC19 /* GPCameraOperation.m in Sources */,
-				ADBDAE12183B79AE004CBC19 /* GPCameraWindowController.m in Sources */,
-				ADBDAE14183B79AE004CBC19 /* GPConnectWindowController.m in Sources */,
+				ADBDAE0C183B79AE004CBC19 /* AppDelegate.m in Sources */,
+				ADBDAE0E183B79AE004CBC19 /* GoProCamera.m in Sources */,
+				ADBDAE12183B79AE004CBC19 /* CameraWindowController.m in Sources */,
+				ADBDAE14183B79AE004CBC19 /* ConnectWindowController.m in Sources */,
 				ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,12 +398,12 @@
 			name = ConnectWindow.xib;
 			sourceTree = "<group>";
 		};
-		AD545685183B7625000A1A20 /* MainMenu.xib */ = {
+		AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD545686183B7625000A1A20 /* en */,
+				AD66E8A9183C0E8A00C7F34D /* en */,
 			);
-			name = MainMenu.xib;
+			name = StatusBarMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

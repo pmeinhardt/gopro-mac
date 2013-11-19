@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GPCameraStatus : NSObject
+@interface GoProCameraStatus : NSObject
 
 @property (nonatomic, assign, readonly) NSInteger videoCount;
 @property (nonatomic, assign, readonly) NSInteger photoCount;
 
 @end
 
-@interface GPCamera : NSObject
+@interface GoProCamera : NSObject
 
-@property (nonatomic, retain, readonly) GPCameraStatus *status;
+@property (nonatomic, retain, readonly) GoProCameraStatus *status;
 
 - (id)initWithIP:(NSString *)ipaddress password:(NSString *)password;
 - (id)initWithPassword:(NSString *)password;
@@ -32,5 +32,5 @@
 
 @end
 
-@interface GPCameraStatusTransformer : NSValueTransformer
+@interface GoProCameraStatusTransformer : NSValueTransformer
 @end

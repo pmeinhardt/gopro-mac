@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GPConnectWindowController : NSWindowController
+@interface ConnectWindowController : NSWindowController
 
 @property (nonatomic, assign) IBOutlet NSProgressIndicator *indicator;
 @property (nonatomic, assign) IBOutlet NSTextField *field;

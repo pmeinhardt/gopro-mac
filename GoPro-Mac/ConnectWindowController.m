@@ -6,27 +6,27 @@
 //  Copyright (c) 2013 Paul Meinhardt. All rights reserved.
 //
 
-#import "GPConnectWindowController.h"
+#import "ConnectWindowController.h"
 
-#import "GPCameraWindowController.h"
-#import "GPCamera.h"
+#import "CameraWindowController.h"
+#import "GoProCamera.h"
 
 #import "NSWindow+GPExtensions.h"
 
 #import <dispatch/dispatch.h>
 
-@interface GPConnectWindowController ()
+@interface ConnectWindowController ()
 
 - (void)waiting;
 - (void)reset:(BOOL)completely;
 
-- (void)connect:(GPCamera *)camera;
-- (void)connected:(GPCamera *)camera;
-- (void)unavailable:(GPCamera *)camera;
+- (void)connect:(GoProCamera *)camera;
+- (void)connected:(GoProCamera *)camera;
+- (void)unavailable:(GoProCamera *)camera;
 
 @end
 
-@implementation GPConnectWindowController
+@implementation ConnectWindowController
 
 - (void)cancelOperation:(id)sender
 {
@@ -73,10 +73,10 @@
         return;
     }
 
-    [self connect:[[GPCamera alloc] initWithPassword:password]];
+    [self connect:[[GoProCamera alloc] initWithPassword:password]];
 }
 
-- (void)connect:(GPCamera *)camera
+- (void)connect:(GoProCamera *)camera
 {
     [self waiting];
 
@@ -94,9 +94,9 @@
     });
 }
 
-- (void)connected:(GPCamera *)camera
+- (void)connected:(GoProCamera *)camera
 {
-    GPCameraWindowController *controller = [[GPCameraWindowController alloc] initWithWindowNibName:@"CameraWindow"];
+    CameraWindowController *controller = [[CameraWindowController alloc] initWithWindowNibName:@"CameraWindow"];
     [controller setCamera:camera];
     [controller showWindow:self];
 
@@ -106,7 +106,7 @@
     [self reset:YES];
 }
 
-- (void)unavailable:(GPCamera *)camera
+- (void)unavailable:(GoProCamera *)camera
 {
     // TODO: notify user
     //  - check connected to GoPro Wi-Fi network

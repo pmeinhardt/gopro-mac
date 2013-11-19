@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Paul Meinhardt. All rights reserved.
 //
 
-#import "GPCamera.h"
+#import "GoProCamera.h"
 
 #import "libgopro.h"
 
-@interface GPCameraStatus ()
+@interface GoProCameraStatus ()
 
 @property (nonatomic, assign) NSInteger videoCount;
 @property (nonatomic, assign) NSInteger photoCount;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation GPCameraStatus
+@implementation GoProCameraStatus
 
 - (id)initWithStatus:(gopro_status *)status
 {
@@ -41,13 +41,13 @@
 
 @end
 
-@interface GPCamera ()
+@interface GoProCamera ()
 
 @property (nonatomic, assign, readonly) gopro_camera *camera;
 
 @end
 
-@implementation GPCamera
+@implementation GoProCamera
 
 @synthesize camera = _camera;
 @synthesize status = _status;
@@ -65,7 +65,7 @@
     self = [super init];
     if (self) {
         _camera = gopro_camera_create((char *)[ipaddress UTF8String], (char *)[password UTF8String]);
-        _status = [[GPCameraStatus alloc] init];
+        _status = [[GoProCameraStatus alloc] init];
     }
     return self;
 }
@@ -74,7 +74,7 @@
     self = [super init];
     if (self) {
         _camera = gopro_camera_create_default((char *)[password UTF8String]);
-        _status = [[GPCameraStatus alloc] init];
+        _status = [[GoProCameraStatus alloc] init];
     }
     return self;
 }
@@ -143,7 +143,7 @@
 
 @end
 
-@implementation GPCameraStatusTransformer
+@implementation GoProCameraStatusTransformer
 
 + (Class)transformedValueClass
 {
@@ -157,7 +157,7 @@
 
 - (id)transformedValue:(id)value
 {
-    GPCameraStatus *status = (GPCameraStatus *)value;
+    GoProCameraStatus *status = (GoProCameraStatus *)value;
     return [NSString stringWithFormat:@"%ld videos, %ld photos", status.videoCount, status.photoCount];
 }
 

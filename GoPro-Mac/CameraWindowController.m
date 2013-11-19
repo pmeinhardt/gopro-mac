@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Paul Meinhardt. All rights reserved.
 //
 
-#import "GPCameraWindowController.h"
+#import "CameraWindowController.h"
 
-@interface GPCameraWindowController ()
+@interface CameraWindowController ()
 
 @property (nonatomic, retain) NSOperationQueue *queue;
 @property (nonatomic, retain) NSInvocationOperation *operation;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation GPCameraWindowController
+@implementation CameraWindowController
 
 - (void)dealloc
 {
