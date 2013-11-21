@@ -275,7 +275,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "/Users/pmeinhardt/Public/GitHub/gopro-mac/GoPro-Mac/Vendor/libgopro";
+			buildWorkingDirectory = "$(SRCROOT)/GoPro-Mac/Vendor/libgopro";
 			dependencies = (
 			);
 			name = libgopro;
