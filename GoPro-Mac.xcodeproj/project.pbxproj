@@ -18,7 +18,7 @@
 		AD66E8A0183BFFFC00C7F34D /* status-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E89C183BFFFC00C7F34D /* status-off@2x.png */; };
 		AD66E8A3183C096A00C7F34D /* status-on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A1183C096A00C7F34D /* status-on.png */; };
 		AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A2183C096A00C7F34D /* status-on@2x.png */; };
-		AD66E8AA183C0E8A00C7F34D /* StatusBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */; };
+		ADB7A838183DF4E10006D06D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB7A836183DF4E10006D06D /* MainMenu.xib */; };
 		ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59011838376700C42D60 /* QuartzCore.framework */; };
 		ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59041838B9DF00C42D60 /* WebKit.framework */; };
 		ADBDAE0C183B79AE004CBC19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545678183B760E000A1A20 /* AppDelegate.m */; };
@@ -80,8 +80,8 @@
 		AD66E89C183BFFFC00C7F34D /* status-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-off@2x.png"; sourceTree = "<group>"; };
 		AD66E8A1183C096A00C7F34D /* status-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-on.png"; sourceTree = "<group>"; };
 		AD66E8A2183C096A00C7F34D /* status-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-on@2x.png"; sourceTree = "<group>"; };
-		AD66E8A9183C0E8A00C7F34D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StatusBarMenu.xib; sourceTree = "<group>"; };
 		AD66E8AB183C111400C7F34D /* GoProMacConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoProMacConstants.h; sourceTree = "<group>"; };
+		ADB7A837183DF4E10006D06D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		ADBA59011838376700C42D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		ADBA59041838B9DF00C42D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -147,7 +147,7 @@
 				AD66E898183BFFFC00C7F34D /* Assets */,
 				AD545674183B75D3000A1A20 /* CameraWindow.xib */,
 				AD545683183B7625000A1A20 /* ConnectWindow.xib */,
-				AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */,
+				ADB7A836183DF4E10006D06D /* MainMenu.xib */,
 				AD267751183B7C7F0084B5F4 /* InfoPlist.strings */,
 				AD66E8AB183C111400C7F34D /* GoProMacConstants.h */,
 				AD545677183B760E000A1A20 /* AppDelegate.h */,
@@ -343,7 +343,7 @@
 				AD66E8A0183BFFFC00C7F34D /* status-off@2x.png in Resources */,
 				AD66E8A3183C096A00C7F34D /* status-on.png in Resources */,
 				AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */,
-				AD66E8AA183C0E8A00C7F34D /* StatusBarMenu.xib in Resources */,
+				ADB7A838183DF4E10006D06D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,12 +398,12 @@
 			name = ConnectWindow.xib;
 			sourceTree = "<group>";
 		};
-		AD66E8A8183C0E8A00C7F34D /* StatusBarMenu.xib */ = {
+		ADB7A836183DF4E10006D06D /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD66E8A9183C0E8A00C7F34D /* en */,
+				ADB7A837183DF4E10006D06D /* en */,
 			);
-			name = StatusBarMenu.xib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -33,6 +33,8 @@
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
     NSStatusItem *item = [bar statusItemWithLength:NSVariableStatusItemLength];
 
+    assert(self.menu != nil);
+
 #ifdef SPARKLE
     // [self.checkForUpdatesMenuItem setEnabled:YES];
     // [self.checkForUpdatesMenuItem setHidden:NO];
