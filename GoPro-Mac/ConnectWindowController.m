@@ -17,7 +17,10 @@
 
 @interface ConnectWindowController ()
 
-- (void)waiting;
+- (void)preventClose;
+- (void)allowClose;
+
+- (void)requesting;
 - (void)reset:(BOOL)completely;
 
 - (void)connect:(GoProCamera *)camera;
@@ -28,41 +31,46 @@
 
 @implementation ConnectWindowController
 
+#pragma mark - NSResponder
+
 - (void)cancelOperation:(id)sender
 {
     [self.window orderOut:sender];
     [self reset:YES];
 }
 
-- (void)waiting
+#pragma mark - Window state
+
+- (void)preventClose
 {
-    [[self.window standardWindowButton:NSWindowCloseButton] setEnabled:NO];
+    [self.window standardWindowButton:NSWindowCloseButton].enabled = NO;
+}
 
-    [self.button setEnabled:NO];
-    [self.button setHidden:YES];
+- (void)allowClose
+{
+    [self.window standardWindowButton:NSWindowCloseButton].enabled = YES;
+}
 
-    [self.field setEnabled:NO];
-    [self.field setHidden:YES];
-
-    [self.indicator startAnimation:nil];
+- (void)requesting
+{
+    [self preventClose];
+    self.loading = YES;
 }
 
 - (void)reset:(BOOL)completely
 {
-    [[self.window standardWindowButton:NSWindowCloseButton] setEnabled:YES];
+    self.loading = NO;
 
-    [self.indicator stopAnimation:nil];
+    [self allowClose];
 
-    [self.button setHidden:NO];
-    [self.button setEnabled:YES];
-
-    if (completely) [self.field setStringValue:@""];
-
-    [self.field setHidden:NO];
-    [self.field setEnabled:YES];
+    if (completely) {
+        [self.field setStringValue:@""];
+    }
 
     [self.field selectText:self];
 }
+
+#pragma mark - IBAction
 
 - (IBAction)confirm:(id)sender
 {
@@ -76,9 +84,11 @@
     [self connect:[[GoProCamera alloc] initWithPassword:password]];
 }
 
+#pragma mark - Connection handling
+
 - (void)connect:(GoProCamera *)camera
 {
-    [self waiting];
+    [self requesting];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         BOOL success = [camera sync];
@@ -102,7 +112,7 @@
 
     [camera release];
 
-    [self.window orderOut:nil];
+    [self.window orderOut:self];
     [self reset:YES];
 }
 

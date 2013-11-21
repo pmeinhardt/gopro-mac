@@ -1,5 +1,5 @@
 //
-//  GPAppDelegate.h
+//  AppDelegate.h
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/13/13.
@@ -10,9 +10,11 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+// Interface elements (system status bar)
 @property (nonatomic, retain) NSStatusItem *item;
 @property (nonatomic, assign) IBOutlet NSMenu *menu;
 
+// View actions
 - (IBAction)openAbout:(id)sender;
 - (IBAction)openDocumentation:(id)sender;
 - (IBAction)newConnection:(id)sender;

@@ -1,5 +1,5 @@
 //
-//  GPCameraWindowController.m
+//  CameraWindowController.m
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/16/13.
@@ -41,6 +41,8 @@
     return self;
 }
 
+#pragma mark -
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"isFinished"] && [object isKindOfClass:[NSInvocationOperation class]]) {
@@ -56,7 +58,7 @@
         return; // allow only one operation at a time
     }
 
-    [self.spinner startAnimation:self];
+    self.loading = YES;
 
     self.operation = [[[NSInvocationOperation alloc] initWithTarget:self.camera selector:action object:nil] autorelease];
     [self.operation addObserver:self forKeyPath:@"isFinished" options:0 context:self.queue];
@@ -68,8 +70,10 @@
     [self.operation removeObserver:self forKeyPath:@"isFinished"];
     self.operation = nil;
 
-    [self.spinner stopAnimation:self];
+    self.loading = NO;
 }
+
+#pragma mark - IBAction
 
 - (IBAction)sync:(id)sender
 {

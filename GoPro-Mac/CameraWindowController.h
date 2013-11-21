@@ -1,5 +1,5 @@
 //
-//  GPCameraWindowController.h
+//  CameraWindowController.h
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/16/13.
@@ -12,13 +12,18 @@
 
 @interface CameraWindowController : NSWindowController
 
+// Reference to the connected camera
+@property (nonatomic, retain) GoProCamera *camera;
+
+// Window controls
 @property (nonatomic, assign) IBOutlet NSProgressIndicator *spinner;
 @property (nonatomic, assign) IBOutlet NSTextField *label;
 
-@property (nonatomic, retain) GoProCamera *camera;
+// Indicates an ongoing request - used in Cocoa bindings of the window
+@property (nonatomic, assign) BOOL loading;
 
+// View actions
 - (IBAction)sync:(id)sender;
-
 - (IBAction)capture:(id)sender;
 - (IBAction)setMode:(id)sender;
 

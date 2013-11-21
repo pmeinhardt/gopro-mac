@@ -1,5 +1,5 @@
 //
-//  GPConnectWindowController.h
+//  ConnectWindowController.h
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/16/13.
@@ -10,10 +10,15 @@
 
 @interface ConnectWindowController : NSWindowController
 
+// Controls in the window
 @property (nonatomic, assign) IBOutlet NSProgressIndicator *indicator;
 @property (nonatomic, assign) IBOutlet NSTextField *field;
 @property (nonatomic, assign) IBOutlet NSButton *button;
 
+// Indicates an ongoing connection attempt - used in Cocoa bindings of the window
+@property (nonatomic, assign) BOOL loading;
+
+// View actions
 - (IBAction)confirm:(id)sender;
 
 @end
