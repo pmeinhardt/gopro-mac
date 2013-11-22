@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import "GoProCamera.h"
 
@@ -15,7 +16,12 @@
 // Reference to the connected camera
 @property (nonatomic, retain) GoProCamera *camera;
 
+// Video playback
+@property (nonatomic, retain) AVPlayer *player;
+@property (nonatomic, retain) AVPlayerLayer *layer;
+
 // Window controls
+@property (nonatomic, assign) IBOutlet NSView *screen;
 @property (nonatomic, assign) IBOutlet NSProgressIndicator *spinner;
 @property (nonatomic, assign) IBOutlet NSTextField *label;
 

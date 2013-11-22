@@ -1,5 +1,5 @@
 //
-//  GPCamera.h
+//  GoProCamera.h
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/13/13.

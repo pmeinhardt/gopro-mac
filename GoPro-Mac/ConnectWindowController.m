@@ -1,5 +1,5 @@
 //
-//  GPConnectWindowController.m
+//  ConnectWindowController.m
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/16/13.

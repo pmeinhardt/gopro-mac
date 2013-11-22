@@ -1,5 +1,5 @@
 //
-//  GPCamera.m
+//  GoProCamera.m
 //  GoPro Mac
 //
 //  Created by Paul Meinhardt on 11/13/13.
@@ -123,7 +123,7 @@
 {
     gopro_status status;
 
-    [NSThread sleepForTimeInterval:2.0f];
+    [NSThread sleepForTimeInterval:1.0f];
     int err = GOPRO_SUCCESS;
     status.video_count = rand();
     status.photo_count = rand();// TODO: remove mock return

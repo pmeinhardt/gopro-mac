@@ -19,6 +19,7 @@
 		AD66E8A3183C096A00C7F34D /* status-on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A1183C096A00C7F34D /* status-on.png */; };
 		AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD66E8A2183C096A00C7F34D /* status-on@2x.png */; };
 		ADB7A838183DF4E10006D06D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB7A836183DF4E10006D06D /* MainMenu.xib */; };
+		ADB7A83E183ECF670006D06D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB7A83C183ECF4B0006D06D /* AVFoundation.framework */; };
 		ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59011838376700C42D60 /* QuartzCore.framework */; };
 		ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBA59041838B9DF00C42D60 /* WebKit.framework */; };
 		ADBDAE0C183B79AE004CBC19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545678183B760E000A1A20 /* AppDelegate.m */; };
@@ -82,6 +83,7 @@
 		AD66E8A2183C096A00C7F34D /* status-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-on@2x.png"; sourceTree = "<group>"; };
 		AD66E8AB183C111400C7F34D /* GoProMacConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoProMacConstants.h; sourceTree = "<group>"; };
 		ADB7A837183DF4E10006D06D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ADB7A83C183ECF4B0006D06D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		ADBA59011838376700C42D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		ADBA59041838B9DF00C42D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			files = (
 				AD488FAE1833B5BA00C0880B /* libcurl.dylib in Frameworks */,
 				AD0A9FF1183B7FB100AFCA98 /* libgopro.a in Frameworks */,
+				ADB7A83E183ECF670006D06D /* AVFoundation.framework in Frameworks */,
 				AD488F341833A7F500C0880B /* Cocoa.framework in Frameworks */,
 				ADBA59061838B9F500C42D60 /* WebKit.framework in Frameworks */,
 				ADBA59031838378E00C42D60 /* QuartzCore.framework in Frameworks */,
@@ -133,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				AD488F361833A7F500C0880B /* AppKit.framework */,
+				ADB7A83C183ECF4B0006D06D /* AVFoundation.framework */,
 				AD488F371833A7F500C0880B /* CoreData.framework */,
 				AD488F381833A7F500C0880B /* Foundation.framework */,
 				ADBA59041838B9DF00C42D60 /* WebKit.framework */,
