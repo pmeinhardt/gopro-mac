@@ -1,6 +1,6 @@
 //
 //  CameraWindowController.h
-//  GoPro Mac
+//  GoPro
 //
 //  Created by Paul Meinhardt on 11/16/13.
 //  Copyright (c) 2013 Paul Meinhardt. All rights reserved.

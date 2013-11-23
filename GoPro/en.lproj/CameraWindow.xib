@@ -48,7 +48,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{114, 614}, {480, 372}}</string>
 				<int key="NSWTFlags">544736256</int>
-				<string key="NSWindowTitle">GoPro Mac</string>
+				<string key="NSWindowTitle">GoPro</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -76,7 +76,7 @@
 								</object>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="35188466"/>
-								<int key="NSButtonFlags">-2030813184</int>
+								<int key="NSButtonFlags">-2030682112</int>
 								<int key="NSButtonFlags2">129</int>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>

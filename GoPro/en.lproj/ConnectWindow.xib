@@ -43,7 +43,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{196, 240}, {342, 61}}</string>
 				<int key="NSWTFlags">544736256</int>
-				<string key="NSWindowTitle">GoPro Mac</string>
+				<string key="NSWindowTitle">GoPro</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
