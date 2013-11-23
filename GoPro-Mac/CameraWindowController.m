@@ -8,6 +8,8 @@
 
 #import "CameraWindowController.h"
 
+#import "BrowserWindowController.h"
+
 #import <dispatch/dispatch.h>
 
 static void *PlayerItemStatusContext = &PlayerItemStatusContext;
@@ -15,19 +17,27 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
 
 @interface CameraWindowController ()
 
+// Camera operation and operation-queue
 @property (nonatomic, retain) NSOperationQueue *queue;
 @property (nonatomic, retain) NSInvocationOperation *operation;
 
+// File browser window controller
+@property (nonatomic, retain, readonly) BrowserWindowController *browserWindowController;
+
+//
 - (void)camexec:(SEL)action;
 - (void)done;
 
 - (void)startPreview;
+- (void)pausePreview;
 
 - (void)loaded:(AVURLAsset *)asset keys:(NSArray *)keys;
 
 @end
 
 @implementation CameraWindowController
+
+@synthesize browserWindowController = _browserWindowController;
 
 - (void)dealloc
 {
@@ -37,6 +47,7 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     [self.queue cancelAllOperations];
     [self.player pause];
 
+    [_browserWindowController release];
     [self.operation release];
     [self.queue release];
     [self.player release];
@@ -71,6 +82,17 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     [self startPreview];
 }
 
+#pragma mark -
+
+- (BrowserWindowController *)browserWindowController
+{
+    if (_browserWindowController == nil) {
+        _browserWindowController = [[BrowserWindowController alloc] initWithWindowNibName:@"BrowserWindow"];
+    }
+
+    return _browserWindowController;
+}
+
 #pragma mark - Playback
 
 - (void)startPreview
@@ -93,6 +115,11 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     }];
 }
 
+- (void)pausePreview
+{
+    [self.player pause];
+}
+
 - (void)loaded:(AVURLAsset *)asset keys:(NSArray *)keys
 {
     NSError *error;
@@ -112,10 +139,10 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     }
 
     // This seems to always return 0, even if we can play a video:
-    // if ([asset tracksWithMediaType:AVMediaTypeVideo].count == 0) {
-    //     NSLog(@"ERROR: Asset has no video tracks: %@", asset);
-    //     return;
-    // }
+    //if ([asset tracksWithMediaType:AVMediaTypeVideo].count == 0) {
+    //    NSLog(@"ERROR: Asset has no video tracks: %@", asset);
+    //    return;
+    //}
 
     // We can play this asset. Now set up an AVPlayerLayer,
     // add it to the view, but hide it until ready for display.
@@ -145,11 +172,11 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
         AVPlayerStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
         switch (status) {
             case AVPlayerItemStatusUnknown:
-                NSLog(@"ERROR: Player item status unknown"); // TODO: handle
+                NSLog(@"INFO: Player item status unknown"); // TODO: handle
                 break;
 
             case AVPlayerItemStatusReadyToPlay:
-                NSLog(@"Player item ready to play");
+                NSLog(@"INFO: Player item ready to play");
                 [self.player play];
                 break;
 
@@ -223,6 +250,10 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
             // nothing
             break;
     }
+}
+- (IBAction)browse:(id)sender
+{
+    [self.browserWindowController showWindow:sender];
 }
 
 @end

@@ -19,5 +19,6 @@
 - (IBAction)openDocumentation:(id)sender;
 - (IBAction)newConnection:(id)sender;
 - (IBAction)checkForUpdates:(id)sender;
+- (IBAction)reportIssue:(id)sender;
 
 @end

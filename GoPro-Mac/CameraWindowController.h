@@ -32,5 +32,6 @@
 - (IBAction)sync:(id)sender;
 - (IBAction)capture:(id)sender;
 - (IBAction)setMode:(id)sender;
+- (IBAction)browse:(id)sender;
 
 @end

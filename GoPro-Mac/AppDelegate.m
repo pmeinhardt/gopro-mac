@@ -22,7 +22,7 @@
 
 - (void)dealloc
 {
-    [self.connectWindowController release];
+    [_connectWindowController release];
     [super dealloc];
 }
 
@@ -30,23 +30,27 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-    NSStatusBar *bar = [NSStatusBar systemStatusBar];
-    NSStatusItem *item = [bar statusItemWithLength:NSVariableStatusItemLength];
+    BOOL showSystemStatusBarMenu = YES; // TODO: Set via NSUserDefaults/Preferences
 
-    assert(self.menu != nil);
+    if (showSystemStatusBarMenu) {
+        NSStatusBar *bar = [NSStatusBar systemStatusBar];
+        NSStatusItem *item = [bar statusItemWithLength:NSVariableStatusItemLength];
+
+        assert(self.menu != nil);
 
 #ifdef SPARKLE
-    // [self.checkForUpdatesMenuItem setEnabled:YES];
-    // [self.checkForUpdatesMenuItem setHidden:NO];
+        // [self.checkForUpdatesMenuItem setEnabled:YES];
+        // [self.checkForUpdatesMenuItem setHidden:NO];
 #endif
 
-    [item setHighlightMode:YES];
-    [item setMenu:self.menu];
+        [item setHighlightMode:YES];
+        [item setMenu:self.menu];
 
-    [item setImage:[NSImage imageNamed:@"status-off"]];
-    [item setAlternateImage:[NSImage imageNamed:@"status-on"]];
+        [item setImage:[NSImage imageNamed:@"status-off"]];
+        [item setAlternateImage:[NSImage imageNamed:@"status-on"]];
 
-    self.item = item;
+        self.item = item;
+    }
 
     [self newConnection:self];
 }
@@ -92,6 +96,12 @@
     [[SUUpdater sharedUpdater] setSendsSystemProfile:YES];
     [[SUUpdater sharedUpdater] checkForUpdates:sender];
 #endif
+}
+
+- (IBAction)reportIssue:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:kGoProAppIssuesURLString];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 @end

@@ -10,5 +10,6 @@
 #define GOPRO_MAC_CONSTANTS_H
 
 static NSString * const kGoProAppWebsiteURLString = @"https://github.com/pmeinhardt/gopro-mac";
+static NSString * const kGoProAppIssuesURLString = @"https://github.com/pmeinhardt/gopro-mac/issues";
 
 #endif
