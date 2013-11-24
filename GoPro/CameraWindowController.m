@@ -41,6 +41,7 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
 
 - (void)dealloc
 {
+    [_browserWindowController.window close];
     [self removeObserver:self forKeyPath:@"player.currentItem.status"];
     [self removeObserver:self forKeyPath:@"layer.readyForDisplay"];
     [self.operation removeObserver:self forKeyPath:@"isFinished"];
@@ -253,7 +254,11 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
 }
 - (IBAction)browse:(id)sender
 {
-    [self.browserWindowController showWindow:sender];
+    BrowserWindowController *controller = self.browserWindowController;
+    NSString *address = @"https://www.google.com/";// [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
+
+    [controller setBaseURL:[NSURL URLWithString:address]];
+    [controller showWindow:sender];
 }
 
 @end

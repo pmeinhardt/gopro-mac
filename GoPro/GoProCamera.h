@@ -22,6 +22,8 @@
 - (id)initWithIP:(NSString *)ipaddress password:(NSString *)password;
 - (id)initWithPassword:(NSString *)password;
 
+- (NSString *)address;
+
 - (BOOL)startCapture;
 - (BOOL)stopCapture;
 

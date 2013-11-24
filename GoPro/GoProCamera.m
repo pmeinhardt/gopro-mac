@@ -79,6 +79,15 @@
     return self;
 }
 
+#pragma mark -
+
+- (NSString *)address
+{
+    return [NSString stringWithUTF8String:_camera->ipaddr];
+}
+
+#pragma mark - Actions
+
 - (BOOL)startCapture
 {
     NSLog(@"start capture");

@@ -9,9 +9,20 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface BrowserWindowController : NSWindowController
+@interface BrowserWindowController : NSWindowController <NSToolbarDelegate>
 
 // Window controls
-@property (nonatomic, assign) IBOutlet WebView *webview;
+@property (nonatomic, assign) IBOutlet WebView *webView;
+@property (nonatomic, assign) IBOutlet NSToolbar *toolbar;
+@property (nonatomic, assign) IBOutlet NSView *navbar;
+
+// Other properties
+@property (nonatomic, retain) NSURL *baseURL;
+@property (nonatomic, assign) BOOL loading;
+
+// Actions
+- (IBAction)goForward:(id)sender;
+- (IBAction)goBack:(id)sender;
+- (IBAction)reload:(id)sender;
 
 @end
