@@ -58,9 +58,12 @@ static CGFloat const BrowserWindowBottomBarHeight = 25.0;
     if (itemIdentifier == BrowserWindowNavigationBarItemIdentifier) {
         // Configure the toolbar item containing the navigation bar.
         NSToolbarItem *item = [[[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier] autorelease];
+        NSRect frame = self.navbar.frame;
+
         item.view = self.navbar;
-        item.minSize = NSMakeSize(280.0, 32.0);
-        item.maxSize = NSMakeSize(CGFLOAT_MAX, 32.0);
+        item.minSize = NSMakeSize(frame.size.width, frame.size.height);
+        item.maxSize = NSMakeSize(CGFLOAT_MAX, frame.size.height);
+
         return item;
     }
 
