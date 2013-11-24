@@ -101,7 +101,8 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     // Create an asset with our URL, asychronously load its tracks, duration,
     // and whether it's playable or protected. When that loading is complete,
     // play the asset with a player.
-    NSURL *url = [NSURL URLWithString:@"http://devstreaming.apple.com/videos/wwdc/2013/102xex1x2e4xpykz1y/102/sl.m3u8"];
+    NSString *host = [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", host, @"/live/amba.m3u8"]];
 
     AVURLAsset *asset = [AVAsset assetWithURL:url];
     NSArray *keys = [NSArray arrayWithObjects:@"playable", @"hasProtectedContent", @"tracks", @"duration", nil];
