@@ -83,6 +83,13 @@ static CGFloat const BrowserWindowBottomBarHeight = 25.0;
     }
 }
 
+- (void)webView:(WebView *)sender didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame
+{
+    if (frame == self.webView.mainFrame) {
+        self.loading = NO;
+    }
+}
+
 #pragma mark - Actions
 
 - (IBAction)goForward:(id)sender

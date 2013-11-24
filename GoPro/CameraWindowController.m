@@ -255,7 +255,7 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
 - (IBAction)browse:(id)sender
 {
     BrowserWindowController *controller = self.browserWindowController;
-    NSString *address = @"https://www.google.com/";// [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
+    NSString *address = [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
 
     [controller setBaseURL:[NSURL URLWithString:address]];
     [controller showWindow:sender];
