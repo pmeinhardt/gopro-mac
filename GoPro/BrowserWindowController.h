@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 
-@interface BrowserWindowController : NSWindowController <NSToolbarDelegate>
+@interface BrowserWindowController : NSWindowController <NSToolbarDelegate, NSURLDownloadDelegate>
 
 // Window controls
 @property (nonatomic, assign) IBOutlet WebView *webView;

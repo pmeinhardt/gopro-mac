@@ -1,0 +1,64 @@
+/*
+
+ Stylesheet injected into the WebView for browsing GoPro files.
+
+*/
+
+body {
+    background-color: #f0f0f0;
+    background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%, #f0f0f0 100%)
+    color: #444;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42;
+}
+
+a {
+    color: #0e5fce;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%; /* responsive images */
+}
+
+img.logo {
+    max-height: 70px;
+}
+
+img.icon {
+    max-width: none;
+}
+
+#dirlist {
+    text-align: left;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+#dirlist .headings {
+    font-size: 0.8em;
+}
+
+#dirlist .headings a {
+    color: #666;
+}
+
+#dirlist table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#dirlist table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#dirlist table td,
+#dirlist table th {
+    padding: 2px 8px;
+}

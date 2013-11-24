@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ConnectWindowController.h"
+#import "BundleResourceProtocol.h"
 
 @interface AppDelegate ()
 
@@ -52,6 +53,10 @@
         self.item = item;
     }
 
+    // Register our custom protocol for loading bundle resources
+    [NSURLProtocol registerClass:[BundleResourceProtocol class]];
+
+    // Initiate a new connection
     [self newConnection:self];
 }
 

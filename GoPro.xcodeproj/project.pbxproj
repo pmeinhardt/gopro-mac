@@ -29,6 +29,10 @@
 		ADBDAE12183B79AE004CBC19 /* CameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD54567E183B760E000A1A20 /* CameraWindowController.m */; };
 		ADBDAE14183B79AE004CBC19 /* ConnectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545680183B760E000A1A20 /* ConnectWindowController.m */; };
 		ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */; };
+		ADDE97871842026C008F7041 /* stylesheet.css in Resources */ = {isa = PBXBuildFile; fileRef = ADDE97861842026C008F7041 /* stylesheet.css */; };
+		ADDE978A1842371F008F7041 /* BundleResourceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDE97891842371F008F7041 /* BundleResourceProtocol.m */; };
+		ADDE978C184253F3008F7041 /* customize.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDE978B184253F3008F7041 /* customize.js */; };
+		ADDE978D18425A66008F7041 /* customize.js in Resources */ = {isa = PBXBuildFile; fileRef = ADDE978B184253F3008F7041 /* customize.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		AD267752183B7C7F0084B5F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AD488F301833A7F500C0880B /* GoPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoPro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD488F301833A7F500C0880B /* GoPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD488F331833A7F500C0880B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AD488F361833A7F500C0880B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AD488F371833A7F500C0880B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -91,6 +95,10 @@
 		ADB7A8431840B7CF0006D06D /* BrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserWindowController.m; sourceTree = "<group>"; };
 		ADBA59011838376700C42D60 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		ADBA59041838B9DF00C42D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		ADDE97861842026C008F7041 /* stylesheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = stylesheet.css; sourceTree = "<group>"; };
+		ADDE97881842371F008F7041 /* BundleResourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleResourceProtocol.h; sourceTree = "<group>"; };
+		ADDE97891842371F008F7041 /* BundleResourceProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleResourceProtocol.m; sourceTree = "<group>"; };
+		ADDE978B184253F3008F7041 /* customize.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = customize.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,8 @@
 				AD545678183B760E000A1A20 /* AppDelegate.m */,
 				ADB7A8421840B7CE0006D06D /* BrowserWindowController.h */,
 				ADB7A8431840B7CF0006D06D /* BrowserWindowController.m */,
+				ADDE97881842371F008F7041 /* BundleResourceProtocol.h */,
+				ADDE97891842371F008F7041 /* BundleResourceProtocol.m */,
 				AD54567D183B760E000A1A20 /* CameraWindowController.h */,
 				AD54567E183B760E000A1A20 /* CameraWindowController.m */,
 				AD54567F183B760E000A1A20 /* ConnectWindowController.h */,
@@ -273,6 +283,8 @@
 				AD66E89C183BFFFC00C7F34D /* status-off@2x.png */,
 				AD66E8A1183C096A00C7F34D /* status-on.png */,
 				AD66E8A2183C096A00C7F34D /* status-on@2x.png */,
+				ADDE97861842026C008F7041 /* stylesheet.css */,
+				ADDE978B184253F3008F7041 /* customize.js */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -311,7 +323,7 @@
 				AD488FA11833AC8100C0880B /* PBXTargetDependency */,
 			);
 			name = GoPro;
-			productName = "GoPro";
+			productName = GoPro;
 			productReference = AD488F301833A7F500C0880B /* GoPro.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -357,6 +369,8 @@
 				AD66E8A4183C096A00C7F34D /* status-on@2x.png in Resources */,
 				ADB7A838183DF4E10006D06D /* MainMenu.xib in Resources */,
 				ADB7A8411840B6EB0006D06D /* BrowserWindow.xib in Resources */,
+				ADDE97871842026C008F7041 /* stylesheet.css in Resources */,
+				ADDE978D18425A66008F7041 /* customize.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +388,8 @@
 				ADBDAE14183B79AE004CBC19 /* ConnectWindowController.m in Sources */,
 				ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */,
 				ADB7A8441840B7CF0006D06D /* BrowserWindowController.m in Sources */,
+				ADDE978A1842371F008F7041 /* BundleResourceProtocol.m in Sources */,
+				ADDE978C184253F3008F7041 /* customize.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
