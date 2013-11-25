@@ -98,7 +98,10 @@ static CGFloat const BrowserWindowBottomBarHeight = 25.0;
             //
             // However, we trust our own camera (and protocol implementation)
             // and bypass this restriction.
-            NSString *script = @""
+            NSString *script = @"(function() {"
+                "if (window.customized) return;"
+                "window.customized = true;"
+                ""
                 "var head = document.getElementsByTagName('head')[0];"
                 ""
                 "var link = document.createElement('link');"
@@ -108,7 +111,8 @@ static CGFloat const BrowserWindowBottomBarHeight = 25.0;
                 ""
                 "var script = document.createElement('script');"
                 "script.src = 'bundle://customize.js';"
-                "head.appendChild(script);";
+                "head.appendChild(script);"
+                "})();";
 
             [document evaluateWebScript:script];
         }
