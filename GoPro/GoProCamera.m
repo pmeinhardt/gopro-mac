@@ -8,6 +8,8 @@
 
 #import "GoProCamera.h"
 
+#import "GoProMacConstants.h"
+
 #import "libgopro.h"
 
 @interface GoProCameraStatus ()
@@ -57,33 +59,37 @@
     if (self.camera != NULL) gopro_camera_free(self.camera);
 
     [self.status release];
+    [self.IP release];
+
     [super dealloc];
 }
 
-- (id)initWithIP:(NSString *)ipaddress password:(NSString *)password
+- (id)initWithIP:(NSString *)ipaddr port:(NSUInteger)port password:(NSString *)password
 {
     self = [super init];
     if (self) {
-        _camera = gopro_camera_create((char *)[ipaddress UTF8String], (char *)[password UTF8String]);
+        _IP     = [ipaddr copy];
+        _port   = port;
+        _camera = gopro_camera_create((char *)[ipaddr UTF8String], (char *)[password UTF8String]);
         _status = [[GoProCameraStatus alloc] init];
     }
     return self;
 }
 
+- (id)initWithIP:(NSString *)ipaddr password:(NSString *)password
+{
+    return [self initWithIP:ipaddr port:kGoProCameraDefaultPort password:password];
+}
+
 - (id)initWithPassword:(NSString *)password {
-    self = [super init];
-    if (self) {
-        _camera = gopro_camera_create_default((char *)[password UTF8String]);
-        _status = [[GoProCameraStatus alloc] init];
-    }
-    return self;
+    return [self initWithIP:kGoProCameraDefaultIPAddress password:password];
 }
 
 #pragma mark -
 
-- (NSString *)address
+- (NSString *)webAddress
 {
-    return [NSString stringWithUTF8String:_camera->ipaddr];
+    return [NSString stringWithFormat:@"http://%@:8080", self.IP];
 }
 
 #pragma mark - Actions

@@ -101,8 +101,7 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
     // Create an asset with our URL, asychronously load its tracks, duration,
     // and whether it's playable or protected. When that loading is complete,
     // play the asset with a player.
-    NSString *host = [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", host, @"/live/amba.m3u8"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", self.camera.webAddress, @"/live/amba.m3u8"]];
 
     AVURLAsset *asset = [AVAsset assetWithURL:url];
     NSArray *keys = [NSArray arrayWithObjects:@"playable", @"hasProtectedContent", @"tracks", @"duration", nil];
@@ -256,9 +255,7 @@ static void *PlayerLayerReadyForDisplay = &PlayerLayerReadyForDisplay;
 - (IBAction)browse:(id)sender
 {
     BrowserWindowController *controller = self.browserWindowController;
-    NSString *address = [NSString stringWithFormat:@"http://%@:%@", self.camera.address, @"8080"];
-
-    [controller setBaseURL:[NSURL URLWithString:address]];
+    [controller setBaseURL:[NSURL URLWithString:self.camera.webAddress]];
     [controller showWindow:sender];
 }
 

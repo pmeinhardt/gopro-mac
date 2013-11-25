@@ -19,10 +19,14 @@
 
 @property (nonatomic, retain, readonly) GoProCameraStatus *status;
 
-- (id)initWithIP:(NSString *)ipaddress password:(NSString *)password;
+@property (nonatomic, retain, readonly) NSString *IP;
+@property (nonatomic, assign, readonly) NSUInteger port;
+
+- (id)initWithIP:(NSString *)ipaddr port:(NSUInteger)port password:(NSString *)password;
+- (id)initWithIP:(NSString *)ipaddr password:(NSString *)password;
 - (id)initWithPassword:(NSString *)password;
 
-- (NSString *)address;
+- (NSString *)webAddress;
 
 - (BOOL)startCapture;
 - (BOOL)stopCapture;

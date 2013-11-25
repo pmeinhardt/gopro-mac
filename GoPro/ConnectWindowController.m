@@ -81,7 +81,15 @@
         return;
     }
 
-    [self connect:[[GoProCamera alloc] initWithPassword:password]];
+    GoProCamera *camera;
+
+#ifdef DEBUG
+    camera = [[GoProCamera alloc] initWithIP:@"127.0.0.1" port:8000 password:@""];
+#else
+    camera = [[GoProCamera alloc] initWithPassword:password]
+#endif
+
+    [self connect:camera];
 }
 
 #pragma mark - Connection handling
