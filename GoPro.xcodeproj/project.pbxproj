@@ -31,7 +31,6 @@
 		ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AD545682183B760F000A1A20 /* NSWindow+GPExtensions.m */; };
 		ADDE97871842026C008F7041 /* stylesheet.css in Resources */ = {isa = PBXBuildFile; fileRef = ADDE97861842026C008F7041 /* stylesheet.css */; };
 		ADDE978A1842371F008F7041 /* BundleResourceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDE97891842371F008F7041 /* BundleResourceProtocol.m */; };
-		ADDE978C184253F3008F7041 /* customize.js in Sources */ = {isa = PBXBuildFile; fileRef = ADDE978B184253F3008F7041 /* customize.js */; };
 		ADDE978D18425A66008F7041 /* customize.js in Resources */ = {isa = PBXBuildFile; fileRef = ADDE978B184253F3008F7041 /* customize.js */; };
 /* End PBXBuildFile section */
 
@@ -389,7 +388,6 @@
 				ADBDAE16183B79AE004CBC19 /* NSWindow+GPExtensions.m in Sources */,
 				ADB7A8441840B7CF0006D06D /* BrowserWindowController.m in Sources */,
 				ADDE978A1842371F008F7041 /* BundleResourceProtocol.m in Sources */,
-				ADDE978C184253F3008F7041 /* customize.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
